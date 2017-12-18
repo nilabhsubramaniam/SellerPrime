@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="sellerPrime">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title set in pageTitle directive -->
+    <title page-title></title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link id="loadBefore" href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<!-- ControllerAs syntax -->
+
+<body ng-controller="TypeaheadCtrl">
+
+<div class="container-fluid" ng-controller="TypeaheadCtrl">
+    <h2><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/angular-logo.svg" alt="Angular.js Logo">Typehead</h2>
+    <div class="form-group">
+        <label for="states">Search for Educational Degree</label>
+        <input name="states" id="states" type="text" class="form-control" placeholder="enter an education degree to know more about it" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" >
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+</div>
+
+<!-- jQuery and Bootstrap -->
+<script src="js/jquery/jquery-2.1.1.min.js"></script>
+<script src="js/plugins/jquery-ui/jquery-ui.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- MetsiMenu -->
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+<!-- SlimScroll -->
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Peace JS -->
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- Custom and plugin
+<!-- Main Angular scripts-->
+<script src="js/angular/angular.min.js"></script>
+<script src="js/angular/angular-sanitize.js"></script>
+<script src="js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+<script src="js/ui-router/angular-ui-router.min.js"></script>
+<script src="js/bootstrap/ui-bootstrap-tpls-1.1.2.min.js"></script>
+<script src="js/plugins/angular-idle/angular-idle.js"></script>
+
+<!-- Anglar App Script -->
+<script src="js/controllers.js"></script>
+
+</body>
+</html>
